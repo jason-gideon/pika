@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{334eacd7-acd3-4981-8f67-9cff7a2635a0}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>pika</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{D51BCBC9-82E9-4017-911E-C93873C4EA2B}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <ItemGroup>
+    <ClCompile Include="..\..\src\base_conf.cc" />
+    <ClCompile Include="..\..\src\csapp.cc" />
+    <ClCompile Include="..\..\src\pika.cc" />
+    <ClCompile Include="..\..\src\pika_admin.cc" />
+    <ClCompile Include="..\..\src\pika_conf.cc" />
+    <ClCompile Include="..\..\src\pika_conn.cc" />
+    <ClCompile Include="..\..\src\pika_epoll.cc" />
+    <ClCompile Include="..\..\src\pika_hash.cc" />
+    <ClCompile Include="..\..\src\pika_item.cc" />
+    <ClCompile Include="..\..\src\pika_kv.cc" />
+    <ClCompile Include="..\..\src\pika_list.cc" />
+    <ClCompile Include="..\..\src\pika_server.cc" />
+    <ClCompile Include="..\..\src\pika_set.cc" />
+    <ClCompile Include="..\..\src\pika_thread.cc" />
+    <ClCompile Include="..\..\src\pika_util.cc" />
+    <ClCompile Include="..\..\src\pika_zset.cc" />
+    <ClCompile Include="..\..\src\port.cc" />
+    <ClCompile Include="..\..\src\sds.cc" />
+    <ClCompile Include="..\..\src\status.cc" />
+    <ClCompile Include="..\..\src\util.cc" />
+    <ClCompile Include="..\..\src\zmalloc.cc" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\atomic_pointer.h" />
+    <ClInclude Include="..\..\include\base_conf.h" />
+    <ClInclude Include="..\..\include\conf.h" />
+    <ClInclude Include="..\..\include\config.h" />
+    <ClInclude Include="..\..\include\csapp.h" />
+    <ClInclude Include="..\..\include\fmacros.h" />
+    <ClInclude Include="..\..\include\mario_handler.h" />
+    <ClInclude Include="..\..\include\mutexlock.h" />
+    <ClInclude Include="..\..\include\pika_command.h" />
+    <ClInclude Include="..\..\include\pika_conf.h" />
+    <ClInclude Include="..\..\include\pika_conn.h" />
+    <ClInclude Include="..\..\include\pika_define.h" />
+    <ClInclude Include="..\..\include\pika_epoll.h" />
+    <ClInclude Include="..\..\include\pika_item.h" />
+    <ClInclude Include="..\..\include\pika_server.h" />
+    <ClInclude Include="..\..\include\pika_thread.h" />
+    <ClInclude Include="..\..\include\pika_util.h" />
+    <ClInclude Include="..\..\include\port.h" />
+    <ClInclude Include="..\..\include\sds.h" />
+    <ClInclude Include="..\..\include\slice.h" />
+    <ClInclude Include="..\..\include\status.h" />
+    <ClInclude Include="..\..\include\util.h" />
+    <ClInclude Include="..\..\include\xdebug.h" />
+    <ClInclude Include="..\..\include\zmalloc.h" />
+  </ItemGroup>
+  <ItemDefinitionGroup />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
