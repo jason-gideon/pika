@@ -101,6 +101,10 @@ void daemonize(void) {
     int fd;
 
     if (fork() != 0) exit(0); /* parent exits */
+
+    /*脱离父进程的 sessionid、进程组id、打开的终端
+    子进程从父进程继承sessionid、进程组id、打开的终端。子进程如果
+    要脱离这些，通过调用setsid来实现。*/
     setsid(); /* create a new session */
 
     if ((fd = open("/dev/null", O_RDWR, 0)) != -1) {
